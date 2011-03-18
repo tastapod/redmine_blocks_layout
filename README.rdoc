@@ -1,0 +1,10 @@
+= layout
+
+Manages presence of boxes on Home, Project Overview and My Page. Can use additional boxes provided by Basic Polls and Last Forum Messages plugins.
+
+Instructions:
+
+Administrator permissions required.
+- Home: click Edit Home Page and checkmark the boxes to be dispayed.
+- Overview: go to Settings - MOdules and enable Redmine blocks. Go to project's Overview, click Edit Page and checkmark the boxes to be displayed.
+- My Page: click Personalize; use additional entries in the dropdown list to customize the page.Description goes here

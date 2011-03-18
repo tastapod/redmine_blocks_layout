@@ -1,0 +1,26 @@
+<h2><%= l(:label_home) %></h2>
+
+
+<div class="contextual">
+    <%= link_to l(:label_edit_home_page), {:controller => 'blocks', :action => 'edit_home'}, :class => 'icon icon-edit' if User.current.admin? %>
+</div>
+<br/>
+
+<div class="splitcontentleft">
+  <%= textilizable Setting.welcome_text %>
+
+  <%= call_hook(:view_welcome_index_left, :projects => @projects) %>
+</div>
+
+<div class="splitcontentright">
+    <% if @projects.any? %>
+	<% end %>
+    <%= call_hook(:view_welcome_index_right, :projects => @projects) %>
+</div>
+
+<% content_for :header_tags do %>
+<%= auto_discovery_link_tag(:atom, {:controller => 'news', :action => 'index', :key => User.current.rss_key, :format => 'atom'},
+                                   :title => "#{Setting.app_title}: #{l(:label_news_latest)}") %>
+<%= auto_discovery_link_tag(:atom, {:controller => 'activities', :action => 'index', :key => User.current.rss_key, :format => 'atom'},
+                                   :title => "#{Setting.app_title}: #{l(:label_activity)}") %>
+<% end %>
