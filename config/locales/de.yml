@@ -8,5 +8,6 @@ de:
    projects: Projekte
    label_edit_home_page: Homepage editieren
    edit_home_page: Homepage editieren
-   issuechanges: alle Tickets
-   wikichanges: aktuelle Wiki Änderungen
+   label_activities: Aktivitäten
+   label_issuechanges: Alle Tickets
+   label_wikichanges: Aktuelle Wiki Änderungen
