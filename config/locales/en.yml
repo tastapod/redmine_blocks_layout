@@ -8,3 +8,6 @@ en:
    projects: Projects
    label_edit_home_page: Edit home page
    edit_home_page: Edit home page 
+   label_activities: activities
+   label_issuechanges: all issues
+   label_wikichanges: last wiki changes
