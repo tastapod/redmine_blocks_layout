@@ -1,6 +1,6 @@
 <div class="box">
     <h2><%= l(:edit_home_page) %></h2>
-        <% form_tag(:id => 'edit_form') do %>
+    <% form = form_tag(:id => 'edit_form') do %>
         <% available_home_blocks.each do |block| %>
           <% if (!l(block).include? 'translation missing') %>
            <p align="left"><%=check_box_tag 'blocks[]', block, @current_blocks.include?(block) %><%= l(block)%></p>
@@ -9,4 +9,5 @@
         <%= submit_tag l(:button_save) %>
         <%= link_to l(:button_cancel), home_url %>
     <% end %>
+    <%= form if Rails::VERSION::MAJOR >= 3 %>
 </div>
