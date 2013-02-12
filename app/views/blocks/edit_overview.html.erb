@@ -1,13 +1,13 @@
 <div class="box">
     <h2><%= l(:edit_overview_page) %></h2>
-        <% form = form_tag({:project_id => @project}, :id => 'edit_form') do %>
+    <% form = form_tag({:project_id => @project}, :id => 'edit_form') do %>
         <% available_overview_blocks.each do |block| %>
           <% if (!l(block).include? 'translation missing') %>
            <p align="left"><%=check_box_tag 'blocks[]', block, @current_blocks.include?(block) %><%= l(block)%></p>
           <% end %>
         <% end %>
-        <%= form if Rails::VERSION::MAJOR >= 3 %>
         <%= submit_tag l(:button_save) %>
         <%= link_to l(:button_cancel), {:controller => 'projects', :action => 'show', :id => @project} %>
     <% end %>
+    <%= form if Rails::VERSION::MAJOR >= 3 %>
 </div>
