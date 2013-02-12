@@ -19,7 +19,7 @@ class BlocksController < ApplicationController
         id = @project.id
         OverviewBlock.new(:project_id => id, :name=>block).save
       end
-      redirect_to :controller => 'projects',:action=>'show',:id => @project
+      redirect_to :controller => 'projects', :action=>'show', :id => @project
     end
   end
 

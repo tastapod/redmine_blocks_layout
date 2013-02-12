@@ -1,0 +1,7 @@
+  <% if @news.any? && authorize_for('news', 'index') %>
+  <div class="news box">
+    <h3><%= link_to l(:label_news_latest), :controller => 'news', :action => 'index', :project_id => @project %></h3>
+    <%= render :partial => 'news/news', :collection => @news %>
+    <p><%= link_to l(:label_news_view_all), :controller => 'news', :action => 'index', :project_id => @project %></p>
+  </div>
+  <% end %>
