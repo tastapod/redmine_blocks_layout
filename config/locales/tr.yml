@@ -11,12 +11,3 @@ tr:
    label_activities: Aktiviteler
    label_issuechanges: Bütün İşler
    label_wikichanges: Son Wiki Değişiklikleri
-   issue_graph: İş Grafiği
-   label_main_polls: "Anketler"
-   see_polls: "Anketleri Gör"
-
-
-
-   issue_graph_main: "İş Grafiği"
-   time_diagram: "Zaman Çizelgesi"
-   completed_issues: 'Şimdiye kadar tamamlanan işler:'
