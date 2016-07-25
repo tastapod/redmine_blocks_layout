@@ -1,3 +1,4 @@
+<% @projects = User.current.projects %>
 <% if @projects.any? %>
 	<div class="projects box">
 	<h3><%=l(:label_project_latest)%></h3>
