@@ -9,7 +9,7 @@ class CreateTables < ActiveRecord::Migration
       t.column :name, :string, :unique=>true, :null => false
     end
 
-    Project.find(:all).each do |prj|
+    Project.all.each do |prj|
       OverviewBlock.new do |ob|
         ob.project_id = prj.id
         ob.name = 'members'
